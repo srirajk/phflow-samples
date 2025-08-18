@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnson & Johnson Packing List - Pharmaceutical Materials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            box-sizing: border-box;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .header h1 {
+            font-size: 16pt;
+            margin: 0;
+            font-weight: bold;
+        }
+        .exporter-consignee {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .exporter, .consignee {
+            width: 48%;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .field {
+            display: flex;
+            margin-bottom: 5px;
+        }
+        .field-label {
+            width: 30%;
+            font-weight: bold;
+        }
+        .field-value {
+            width: 70%;
+        }
+        .field-label.country {
+            width: 120px;
+        }
+        .field-value.country {
+            width: calc(100% - 125px);
+        }
+        .shipment-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .shipment-field {
+            width: 30%;
+            margin-bottom: 10px;
+        }
+        .special-instructions {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: left;
+            font-size: 9pt;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        .totals {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+        }
+        .totals-table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        .declaration {
+            margin-bottom: 15px;
+        }
+        .signature-line {
+            display: flex;
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            margin-top: 30px;
+            width: 70%;
+        }
+        .page-number {
+            text-align: right;
+            margin-top: 20px;
+        }
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .container {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PACKING LIST</h1>
+        </div>
+        
+        <div class="exporter-consignee">
+            <div class="exporter">
+                <div class="section-title">EXPORTER:</div>
+                <div class="field">
+                    <div class="field-label">Tax ID#:</div>
+                    <div class="field-value">22-0773782</div>
+                </div>
+                <div class="field">
+                    <div class="field-label">Contact Name:</div>
+                    <div class="field-value">Jennifer Martinez</div>
+                </div>
+                <div class="field">
+                    <div class="field-label">Telephone No.:</div>
+                    <div class="field-value">+1 (732) 555-4821</div>
+                </div>
+                <div class="field">
+                    <div class="field-label">E-Mail:</div>
+                    <div class="field-value">jmartinez@jnj.com</div>
+                </div>
+                <div class="field">
+                    <div class="field-label">Company Name/Address:</div>
+                    <div class="field-value">
+                        Johnson & Johnson<br>
+                        One Johnson & Johnson Plaza<br>
+                        New Brunswick, NJ 08901<br>
+                        United States
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label country">Country/Territory:</div>
+                    <div class="field-value country">United States</div>
+                </div>
+            </div>
+            
+            <div class="consignee">
+                <div class="section-title">CONSIGNEE:</div>
+                <div class="field">
+                    <div class="field-label">Tax ID#:</div>
+                    <div class="field-value">75-3847592</div>
+                </div>
+                <div class="field">
+                    <div class="field-label">Contact Name:</div>
+                    <div class="field-value">Dr. Michael Chen</div>
+                </div>
+                <div class="field">
+                    <div class="field-label">Telephone No.:</div>
+                    <div class="field-value">+1 (214) 555-9385</div>
+                </div>
+                <div class="field">
+                    <div class="field-label">E-Mail:</div>
+                    <div class="field-value">mchen@phflow.com</div>
+                </div>
+                <div class="field">
+                    <div class="field-label">Company Name/Address:</div>
+                    <div class="field-value">
+                        PHFlow Manufacturing<br>
+                        4847 Industrial Complex<br>
+                        Dallas, TX 75247<br>
+                        United States
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label country">Country/Territory:</div>
+                    <div class="field-value country">United States</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="shipment-details">
+            <div class="shipment-field">
+                <div class="field-label">Ship Date:</div>
+                <div class="field-value">07/18/2025</div>
+            </div>
+            <div class="shipment-field">
+                <div class="field-label">Air Waybill No. / Tracking No:</div>
+                <div class="field-value">8002 5639 2174</div>
+            </div>
+            <div class="shipment-field">
+                <div class="field-label">Invoice No.:</div>
+                <div class="field-value">INV-JNJ-80026</div>
+            </div>
+            <div class="shipment-field">
+                <div class="field-label">Payment Terms:</div>
+                <div class="field-value">Net 30</div>
+            </div>
+            <div class="shipment-field">
+                <div class="field-label">Package Type:</div>
+                <div class="field-value">Sterile Medical Device Container</div>
+            </div>
+            <div class="shipment-field">
+                <div class="field-label">Purchase Order No.:</div>
+                <div class="field-value">8002</div>
+            </div>
+            <div class="shipment-field">
+                <div class="field-label">Bill of Lading:</div>
+                <div class="field-value">BL-8002684</div>
+            </div>
+        </div>
+        
+        <div class="special-instructions">
+            <div class="field-label">Special Instructions:</div>
+            <div>Surgical implant device - Sterile packaging required. Store in dry conditions. FDA 510(k) cleared. USP Class VI materials.</div>
+            <div>Handle with sterile protocols. This Packing List must be completed in English.</div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Supplier Part<br>Number</th>
+                    <th>Description of Goods<br>(Part #, Serial #, etc.)</th>
+                    <th>No. of<br>Packages</th>
+                    <th>No. of<br>Units</th>
+                    <th>Net Weight<br>(KGS)</th>
+                    <th>Unit of<br>Measure</th>
+                    <th>Expiration<br>Date</th>
+                    <th>Lot Number</th>
+                    <th>Country/Terr.<br>of MFR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JNJ-MESH-1510</td>
+                    <td>
+                        SURGICAL MESH POLYPROPYLENE 15CM X 10CM<br>
+                        Sterile surgical implant, FDA 510(k) cleared<br>
+                        NDC: 0062-1510-25
+                    </td>
+                    <td>5</td>
+                    <td>50</td>
+                    <td>2.5</td>
+                    <td>Units</td>
+                    <td>06/2029</td>
+                    <td>MESH240718C</td>
+                    <td>United States</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="totals">
+            <table class="totals-table">
+                <tr>
+                    <td>Total Units:</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Total Pkgs:</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Total Net Weight:</td>
+                    <td>2.5 KGS</td>
+                </tr>
+                <tr>
+                    <td>Total Gross Weight:</td>
+                    <td>4.8 KGS</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="declaration">
+            I declare that all the information contained in this packing list to be true and correct.
+            This shipment complies with all applicable pharmaceutical regulations including USP, FDA CFR 21 Part 211, and ICH guidelines.
+        </div>
+        
+        <div class="signature-line">
+            Signature / Title / Date: Jennifer Martinez / Quality Manager / 07/18/2025
+        </div>
+        
+        <div>
+            Originator or Name of Company Representative if the packing list is being completed on behalf of a company or individual: Jennifer Martinez
+        </div>
+        
+        <div class="page-number">
+            Page 1 of 1
+        </div>
+    </div>
+</body>
+</html>
